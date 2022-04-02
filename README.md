@@ -1,4 +1,4 @@
-# Tayloe Gray WP Starter based on Bootstrap 4 & Advanced Custom Fields
+# WP Starter based on Bootstrap 4, Advanced Custom Fields and Gravity Forms
 
 ## Getting Started
 1. First you will need to log in to Bitbucket to grab the `wp_starter` starter repo.
