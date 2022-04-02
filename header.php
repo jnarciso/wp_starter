@@ -143,7 +143,7 @@ if ( class_exists('ACF') ) {
 				<div class="col-12">
 					<nav class="navbar navbar-expand-lg justify-content-between navbar-light <?php echo $dropdown_type; ?>" role="navigation">
 
-						<a class="site-logo navbar-brand" href="/" title="<?php esc_html_e( get_bloginfo( 'name', 'display' ) ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/includes/images/tg-logo.svg' ); ?>" alt="<?php esc_html_e( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
+						<a class="site-logo navbar-brand" href="/" title="<?php esc_html_e( get_bloginfo( 'name', 'display' ) ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/includes/images/client-logo.svg' ); ?>" alt="<?php esc_html_e( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 
 						<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" title="Menu">
 							<span></span>

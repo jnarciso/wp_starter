@@ -57,11 +57,8 @@ if ( class_exists('ACF') ) {
 	<footer class="site-footer" role="contentinfo">
 		<div class="container">
 			<div class="row">
-				<div class="col-6">
+				<div class="col-12">
 					<p class="copyright">Copyright &copy; <?php esc_html_e( current_time('Y') ); ?> <?php esc_html_e( get_bloginfo( 'name', 'display' ) ); ?>.</p>		
-				</div>
-				<div class="col-6">
-					<p class="tg-mark text-right">Website by <a href="<?php echo esc_url( __('https://www.tayloegray.com', 'wp_starter')); ?>" target="_blank"><img src="<?php echo esc_url( get_template_directory_uri() . '/includes/images/logo-tg-footer-dark.svg' ); ?>" alt="TG Icon Logo" /></a></p>
 				</div>
 			</div>
 			<div class="row">
