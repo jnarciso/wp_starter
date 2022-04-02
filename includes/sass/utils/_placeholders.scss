@@ -1,0 +1,7 @@
+/* 
+Changing _extends include to _placeholders:
+https://sass-lang.com/documentation/style-rules/placeholder-selectors
+Placeholder CSS doesn't show up in generated CSS unless used in a selector.
+`@extend` duplicates every instance of that selector.
+Example:  https://webinista.com/updates/dont-use-extend-sass/
+*/

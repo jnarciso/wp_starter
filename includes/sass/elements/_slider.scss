@@ -1,0 +1,17 @@
+.slick-prev,
+.slick-next {
+	z-index: 2;
+	min-width: auto;
+
+	&::before {
+		opacity: 1;
+	}
+
+}
+
+.slick-prev {
+	left: 10px;
+}
+.slick-next {
+	right: 10px;
+}

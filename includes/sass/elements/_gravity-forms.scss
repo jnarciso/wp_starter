@@ -1,0 +1,302 @@
+// Form Specific Mixins and Variables
+$border-color:		#dee2e6;
+$box-shadow-color: 	#777777;
+$placeholder-color:	#777777;
+
+// Fix your placeholder styling
+@mixin placeholder-styles() {
+    opacity: 1;
+    color: $placeholder-color;    
+    @include font-size(14);    
+}
+::-webkit-input-placeholder {
+    @include placeholder-styles;
+}
+:-moz-placeholder { /* Firefox 18- */
+    @include placeholder-styles;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+    @include placeholder-styles;
+}
+:-ms-input-placeholder {  
+    @include placeholder-styles;
+}
+
+.search-form {
+
+	label {
+		display: none;
+	}
+
+	.input-group-btn .btn {
+		height: 45px;
+		border: solid 1px $border-color;
+		border-left: 0;
+	}
+
+}
+
+.gform_button {
+	border: none;
+
+	padding: 15px 30px;
+	display: inline-block;
+	text-transform: uppercase;
+
+	&.button {
+
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			color: $brand-primary;
+		}
+
+	}
+
+}
+
+.gform_wrapper {
+	margin: 0;
+
+	// basic gravity form styling
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			text-align: left;
+			margin-bottom: 14px;
+		}
+
+	}
+
+	label.gfield_label {
+		//display: none !important;
+	}
+
+	input:not([type='radio']):not([type='checkbox']),
+	textarea,
+	.form-control { // default wordpress form field class
+		width: 100%;
+		padding: 15px;
+		font-weight: 400;		
+		@include font-size(16);
+		border: solid 1px $border-color;
+		background-color: $input-background-color;
+		@include transition( border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s );
+
+		&:focus {
+			outline: none;
+			border-color: $border-color;
+			box-shadow: inset 0 1px 1px rgba(#777, 0.075), 0 0 8px rgba(#777, 0.6);
+		}
+
+	}
+
+	input:not([type='radio']):not([type='checkbox']),
+	.form-control {
+		height: 45px;
+		display: block;
+	}
+
+	.top_label input.medium,
+	.top_label select.medium {
+		width: 100%;
+	}
+
+	.ginput_container_select {
+		width: 100%;
+		display: inline-block;
+		position: relative;
+		border: solid 1px $border-color;
+
+
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			pointer-events: none;
+		}
+
+		&:before {
+			width: 2.25em;
+			height: 100%;
+			top: 0;
+			right: 0;
+		}
+
+		&:after {
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 6px solid $border-color;
+			right: .75em;
+			top: 50%;
+			margin-top: -3px;
+		}
+
+		select::-ms-expand { display: none; } /* bonus: target IE10 */
+
+		select {
+			background-color: $white;
+		}
+
+	}
+
+	.gfield_time_ampm {
+		border: solid 1px $border-color;
+
+		select {
+			height: 45px;
+			border: none;			
+			background-color: $white;
+		}
+
+	}
+
+	.address_state,
+	.address_country {
+		width: 100%;
+		position: relative;
+		display: inline-block;
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			pointer-events: none;
+		}
+
+		&:before {
+			width: 2.25em;
+			height: 100%;
+			top: 0;
+			right: 0;
+		}
+
+		&:after {
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			border-top: 6px solid $border-color;
+			right: 1.25em;
+			top: 30%;
+			margin-top: -3px;
+		}		
+		select::-ms-expand { display: none; } /* bonus: target IE10 */
+	}
+
+	.ginput_container_select select,
+	.address_state select,
+	.address_country select {
+		width: 100%;
+		height: 45px;
+		border-radius: 0;		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 0.01px;
+		text-overflow: '';
+		box-shadow: none;
+		border: none;
+		outline: none;
+		margin: 0;
+		padding-left: 10px;
+		@include transition( border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s );
+
+		&:focus {
+			outline: none;
+			border-color: $border-color;
+			box-shadow: inset 0 1px 1px rgba(#777, 0.075), 0 0 8px rgba(#777, 0.6);
+		}
+		
+		&:hover {
+			cursor: pointer;
+		}
+	}	
+
+	.address_state select,
+	.address_country select {
+		position: relative;
+		background-color: $input-background-color;
+		border: solid 1px $border-color;		
+	}	
+
+	//message styling
+	div.validation_error {
+		border: none !important;
+		color: $white !important;
+		background-color: $error !important;
+	}
+
+	.gfield_required,
+	.validation_message,
+	.gfield_error .gfield_label {
+		color: $error !important;
+	}
+
+	li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+	li.gfield_error textarea {
+		border: solid 1px $error !important;
+	}	
+
+	.validation_error {
+		padding-bottom: 20px;
+	}
+
+	.top_label input.medium,
+	.top_label select.medium {
+		width: 100% !important;
+	}
+
+	li.gfield.gfield_error,
+	li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+		margin-top: 0 !important;
+		padding: 0 !important;		
+		border: none !important;
+		background-color: transparent !important;
+	}
+
+	div.gfield_description {
+
+		&.validation-message {
+			color: $error;
+			background-color: transparent !important;
+		}
+
+	}
+
+}
+
+.form-control {
+	box-shadow: none;
+}
+
+.gform_validation_container {
+	display: none;
+}
+
+.ginput_container.ginput_recaptcha {
+
+	// uncomment to center your recaptcha box
+	// adjust breakpoint to whatever size needed
+	/*@include media-breakpoint-down(lg) {
+		> div {
+			margin: 0 auto !important;
+		}
+	}*/
+
+}
+
+// Default GF Styles Overrides
+.gform_wrapper .gform_validation_errors {
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	border-width: 1px !important;
+
+	h2 {
+		color: $error !important;
+		font-size: 15px !important;
+		font-weight: 400 !important;
+	}
+
+}

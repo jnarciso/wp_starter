@@ -1,0 +1,30 @@
+// Import Bootstrap including custom Bootstrap variables configured for project
+@import "bootstrap/bootstrap";
+
+// Additional vendor styles
+@import "vendor/slick";
+@import "vendor/slick-theme";
+@import "vendor/fancybox";
+
+// Import custom utilities
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/placeholders";
+
+// Import default styles and resets
+@import "base/default";
+
+// Import project specific partials
+@import "pages/home";
+@import "pages/page";
+@import "pages/blog";
+
+// Import project specific elements
+@import "elements/header";
+@import "elements/footer";
+@import "elements/slider";
+@import "elements/gravity-forms";
+@import "elements/gravity-forms-ready-classes";
+
+// Example CSS - Remove as needed
+//@import "pages/examples";

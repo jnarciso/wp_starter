@@ -1,0 +1,143 @@
+.site-notification {
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+
+}
+
+.navbar-light {
+
+	.site-logo {
+		width: 300px;
+	}
+
+	.navbar-nav {
+
+		.nav-link {
+			&:hover,
+			&:focus {
+				color: $brand-primary;
+			}
+		}
+
+	}
+
+	.navbar-toggler {
+		outline: 0;		
+		width: 30px;
+		height: 20px;		
+		padding: 0;		
+		border: none;
+		border-color: transparent;
+		position: relative;
+		cursor: pointer;	
+		background: transparent;	
+
+		span {
+			display: block;
+			position: absolute;
+			height: 2px;
+			width: 100%;
+			left: 0;
+			background-color: $white;
+
+			transform: rotate(0deg);
+			transition: .2s ease-in-out;	
+
+			&:nth-child(1) {
+				top: 0px;
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+		  		top: 8px;
+			}
+
+			&:nth-child(4) {
+				top: 16px;
+			}
+
+		}
+
+		&.open {
+
+			span:nth-child(1) {
+				top: 8px;
+				width: 0%;
+				left: 50%;
+			}
+
+			span:nth-child(2) {
+				transform: rotate(45deg);
+			}			
+
+			span:nth-child(3) {
+				transform: rotate(-45deg);
+			}			
+
+			span:nth-child(4) {
+	  			top: 8px;
+	  			width: 0%;
+	  			left: 50%;
+			}
+
+		}
+
+	}	
+	
+}
+
+// Menu dropdown styles
+
+.dropdown-item:first-child,
+.dropdown-item:last-child {
+	border-radius: 0;
+}
+
+// enable dropdown display on hover if option is enabled in starter theme
+// will always default to "hover"
+.navbar.hover .dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.navbar-expand-lg .navbar-nav {
+	.dropdown-menu {
+		border: none;
+		border-radius: 0;
+		@include clearfix;
+		background: $black;
+
+		.dropdown-item {
+			color: $white;
+			border-radius: 0;
+
+			&:hover,
+			&:focus {
+				color: $black;
+			}
+
+		}
+
+		.dropdown-menu {
+			display: block;
+			border: none;
+			position: relative;
+			margin: 0;
+			padding: 0;
+
+			.dropdown-item {
+				padding-left: 2.5rem;
+
+				&:hover,
+				&:focus {
+					color: $black;
+				}
+
+			}
+
+		}
+
+	}
+
+}

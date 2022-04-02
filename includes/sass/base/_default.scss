@@ -1,0 +1,82 @@
+// Base font size
+html {
+	font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus {
+	color: $brand-primary;
+}
+
+body {
+	color: black;
+}
+
+.clickable {
+	&:hover,
+	&:active {
+		cursor: pointer;
+	}
+}
+
+
+// Default WP theme styles - required
+.screen-reader-text {
+	position: absolute !important;
+    left: -999em;
+
+    &:focus {
+    	left: 0;
+    }
+
+}
+
+.alignleft {
+	float: left;
+	display: inline;
+	margin-right: 20px;
+	@include media-breakpoint-down(md) {
+		float: none;
+		display: block;
+		margin: 0 auto 1rem;
+	}
+}
+.alignright {
+	float: right;
+	display: inline;
+	margin-left: 20px;
+	@include media-breakpoint-down(md) {
+		float: none;
+		display: block;
+		margin: 0 auto 1rem;
+	}	
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1rem;
+}
+
+.wp-caption {
+	padding: .5rem;
+	border: solid 1px $brand-primary;
+}
+
+.wp-caption-text {
+	margin: 0;
+	padding-top: .5rem;
+	@include font-size(14);
+}
+
+.gallery-caption {
+	padding-top: .5rem;
+	@include font-size(14);	
+}
+
+.bypostauthor {
+	padding-top: .5rem;
+	@include font-size(14);
+}
